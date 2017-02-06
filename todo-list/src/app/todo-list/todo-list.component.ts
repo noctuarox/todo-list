@@ -7,9 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  constructor() { }
+  idCounter: number;
+
+  list: any[] = [
+    {
+      text: 'Something'
+    },
+    {
+      text: 'Something else'
+    },
+    {
+      text: 'Something else else'
+    },
+  ];
+
+  constructor() {
+  }
+
+  addToList(){
+    this.list.push({text: ''});
+  }
 
   ngOnInit() {
   }
 
+  onItemCheck(id: number) {
+    this.list.splice(id, 1);
+  }
 }

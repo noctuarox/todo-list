@@ -1,0 +1,42 @@
+.checkbox {
+  cursor: pointer;
+}
+
+.text-area {
+  border: none;
+  text-align: center;
+  height: 30px;
+  width: 300px;
+  color: #F53D68;
+  font-family: Roboto;
+  font-size: 20px;
+  outline: none;
+  background-color: #60D4AE;
+}
+
+.checkbox-container {
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #F53D68;
+  font-family: Roboto;
+  font-size: 20px;
+  opacity: 1;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #909;
+  opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #909;
+  opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #909;
+}

@@ -1,3 +1,6 @@
-<p>
-  todo-list-item works!
-</p>
+<div [@visibility]="visibility" (@visibility.done)="onListItemRemoval()">
+  <div class="checkbox-container">
+    <input class="checkbox" [id]="'id'+id" type="checkbox" (change)="onChangeListItem()">
+    <label [for]="'id'+id"></label><input class="text-area" type="text" placeholder="{{text}}">
+  </div>
+</div>
