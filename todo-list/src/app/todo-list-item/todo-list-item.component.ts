@@ -21,7 +21,9 @@ export class TodoListItemComponent implements OnInit {
   @Output() check = new EventEmitter<number>();
   @Input() text: string;
   @Input() id: number;
-  visibility = 'shown';
+  @Input() isItemEditable: boolean;
+
+  visibility: 'shown'|'removed' = 'shown';
 
   constructor() {
   }
@@ -30,14 +32,16 @@ export class TodoListItemComponent implements OnInit {
   }
 
   onChangeListItem() {
-    this.visibility = this.visibility == 'shown' ? 'removed' : 'shown';
+    this.visibility = this.visibility === 'shown' ? 'removed' : 'shown';
   }
 
-  onListItemRemoval(){
-    if(this.visibility=='removed'){
-    this.check.emit(this.id);
+  onListItemRemoval() {
+    if (this.visibility === 'removed') {
+      this.check.emit(this.id);
     }
   }
 
-
+  get htmlId() {
+    return `id${this.id}`;
+  }
 }

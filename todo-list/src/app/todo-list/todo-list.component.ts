@@ -9,15 +9,15 @@ export class TodoListComponent implements OnInit {
 
   idCounter: number;
 
-  list: any[] = [
+  list = [
     {
-      text: 'Something'
+      text: 'Something', isItemEditable: false
     },
     {
-      text: 'Something else'
+      text: 'Something else', isItemEditable: false
     },
     {
-      text: 'Something else else'
+      text: 'Something else else', isItemEditable: false
     },
   ];
 
@@ -25,7 +25,7 @@ export class TodoListComponent implements OnInit {
   }
 
   addToList(){
-    this.list.push({text: ''});
+    this.list.push({text: '', isItemEditable: true});
   }
 
   ngOnInit() {

@@ -1,6 +1,6 @@
 <div class="list-container">
   <div *ngFor="let item of list; let i = index">
-    <app-todo-list-item [text]="item.text" [id]="i" (check)="onItemCheck($event)"></app-todo-list-item>
+    <app-todo-list-item [text]="item.text" [id]="i" [isItemEditable]="item.isItemEditable" (check)="onItemCheck($event)"></app-todo-list-item>
   </div>
   <div class="list-control">
     <button class="list-add-button" (click)="addToList()">&#43; ADD ITEM</button>

@@ -1,6 +1,6 @@
-<div [@visibility]="visibility" (@visibility.done)="onListItemRemoval()">
-  <div class="checkbox-container">
-    <input [id]="'id'+id" type="checkbox" (change)="onChangeListItem()">
-    <label [for]="'id'+id"><span class="checkbox"></span></label><input class="text-area" type="text" placeholder="{{text}}">
-  </div>
+<div class="checkbox-container" [@visibility]="visibility" (@visibility.done)="onListItemRemoval()">
+  <input [id]="htmlId" type="checkbox" (change)="onChangeListItem()">
+  <label [for]="htmlId"><span class="checkbox"></span></label>
+  <input [disabled]="!isItemEditable" class="text-area" type="text"
+         [value]="text">
 </div>

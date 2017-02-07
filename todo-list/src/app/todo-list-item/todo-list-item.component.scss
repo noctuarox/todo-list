@@ -1,4 +1,4 @@
-@import "../../styles.scss";
+@import "../../_variables.scss";
 
 .text-area {
   border: none;
@@ -70,26 +70,22 @@ input[type="checkbox"]:checked + label span.checkbox::after {
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color: $primary-text-color;
   font-family: $primary-font;
-  font-size: $primary-text-size;
   opacity: 1;
 }
 
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   color: $primary-text-color;
   font-family: $primary-font;
-  font-size: $primary-text-size;
   opacity: 1;
 }
 
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
   color: $primary-text-color;
   font-family: $primary-font;
-  font-size: $primary-text-size;
   opacity: 1;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: $primary-text-color;
   font-family: $primary-font;
-  font-size: $primary-text-size;
 }
