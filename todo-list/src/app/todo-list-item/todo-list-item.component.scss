@@ -1,42 +1,95 @@
-.checkbox {
-  cursor: pointer;
-}
+@import "../../styles.scss";
 
 .text-area {
   border: none;
-  text-align: center;
+  text-align: left;
   height: 30px;
-  width: 300px;
-  color: #F53D68;
-  font-family: Roboto;
-  font-size: 20px;
+  width: 100%;
+  margin-left: 10px;
+  color: $primary-text-color;
+  font-family: $primary-font;
+  font-size: $primary-text-size;
   outline: none;
-  background-color: #60D4AE;
+  background-color: $primary-background-color;
+  box-shadow: none;
+  transition: box-shadow 0.5s ease-out;
+}
+
+.text-area:focus{
+  box-shadow: 0 1px 0 0 rgba(98,175,255,1);
 }
 
 .checkbox-container {
-  margin: 10px;
+  margin: 10px 10px 10px 30px;
   padding: 20px;
-  font-size: 20px;
+  font-size: $primary-text-size;
+}
+
+.checkbox:hover {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label span.checkbox::after {
+  color: $interaction-color;
+}
+
+.checkbox-container input[type="checkbox"]{
+  display: none;
+}
+
+.checkbox-container label {
+  position: relative;
+}
+
+.checkbox-container span::before,
+.checkbox-container span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.checkbox-container span.checkbox::before {
+  width: 27px;
+  height: 27px;
+  background-color: #fff;
+  left: -28px;
+  top: -4px;
+  border: 1px solid $secondary-background-color;
+}
+
+.checkbox-container span.checkbox::after {
+  content: '\f00c';
+  font-family: 'FontAwesome', sans-serif;
+  left: -24px;
+  top: -4px;
+  color: transparent;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  color: #F53D68;
-  font-family: Roboto;
-  font-size: 20px;
+  color: $primary-text-color;
+  font-family: $primary-font;
+  font-size: $primary-text-size;
   opacity: 1;
 }
 
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color: #909;
+  color: $primary-text-color;
+  font-family: $primary-font;
+  font-size: $primary-text-size;
   opacity: 1;
 }
 
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color: #909;
+  color: $primary-text-color;
+  font-family: $primary-font;
+  font-size: $primary-text-size;
   opacity: 1;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #909;
+  color: $primary-text-color;
+  font-family: $primary-font;
+  font-size: $primary-text-size;
 }
