@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, trigger, state, animate, transition, style } from '@angular/core';
+import { Component, Input, Output, EventEmitter, trigger, state, animate, transition, style } from '@angular/core';
 
 @Component({
   selector: 'app-todo-list-item',
@@ -16,7 +16,7 @@ import { Component, OnInit, Input, Output, EventEmitter, trigger, state, animate
     ])
   ]
 })
-export class TodoListItemComponent implements OnInit {
+export class TodoListItemComponent {
 
   @Output() check = new EventEmitter<number>();
   @Input() text: string;
@@ -24,12 +24,6 @@ export class TodoListItemComponent implements OnInit {
   @Input() isItemEditable: boolean;
 
   visibility: 'shown'|'removed' = 'shown';
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
 
   onChangeListItem() {
     this.visibility = this.visibility === 'shown' ? 'removed' : 'shown';
